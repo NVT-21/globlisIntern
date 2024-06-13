@@ -1,0 +1,115 @@
+/* public/css/header.css */
+
+/* Đặt nền màu cho navigation */
+.header-layout {
+    background-color: #249fec;
+    padding: 10px;
+}
+
+/* Đặt kiểu dáng cho danh sách không thứ tự */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Đặt kiểu dáng cho các mục trong danh sách */
+nav ul li {
+    display: inline;
+}
+
+/* Đặt kiểu dáng cho các liên kết */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+/* Đặt kiểu dáng khi di chuột qua các liên kết */
+
+
+/* public/css/styles.css */
+
+/* Đặt kiểu dáng cho tiêu đề */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Đặt kiểu dáng cho nút tạo công ty */
+.btn-primary {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Đặt kiểu dáng cho bảng */
+.table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.table thead {
+    background-color: #f8f9fa;
+}
+
+.table th, .table td {
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    text-align: center;
+}
+
+.table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Đặt kiểu dáng cho các nút hành động */
+.btn-warning {
+    background-color: #ffc107;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+form {
+    display: inline;
+}
+
+button[type="submit"] {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #c82333;
+}
