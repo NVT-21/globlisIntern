@@ -8,17 +8,9 @@
                         @method('PUT')
                        
             
-                        <div class="form-group">
-                            <label for="code">Code</label>
-                            <input type="text" name="code" class="form-control" id="code" value=" {{ $department->code }}"  required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" name="name" class="form-control" id="name" value="{{ $department->name }}"required>
-                        </div>
-
-                        <!-- Thêm các trường dữ liệu khác nếu cần -->
+                        <x-atoms.text-input id="code" name="code" :value="$department->code" />
+    
+                         <x-atoms.text-input id="name" name="name" :value="$department->name" />
 
                         <button type="submit" class="btn btn-primary">Edit Department</button>
                     </form>

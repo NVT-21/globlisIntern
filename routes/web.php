@@ -39,6 +39,9 @@ Route::put('projects/{projectId}', [ProjectController::class, 'update'])->name('
 Route::get('projects/{projectId}/getPeople', [ProjectController::class, 'getPeople'])->name('projects.get_people');
 //Task
 Route::get('tasks/filter', [TaskController::class, 'filter'])->name('tasks.filter');
+Route::get('/tasks/export', [TaskController::class, 'export'])->name('tasks.export');
 Route::resource('tasks', TaskController::class);
+
+
 
 

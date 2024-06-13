@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Services\TaskService;
 use App\Services\ProjectService;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\TasksExport;
 class TaskController extends Controller
 {
     protected $taskService ;
@@ -48,10 +50,14 @@ class TaskController extends Controller
         $this->taskService->delete($id);
         return redirect()->route('tasks.index');
     }
-   public function update($id,Request $request)
-   {
-    $data=$request->all();
-    $this->taskService->updateTask($id,$request->all());
-    return redirect()->route('tasks.index');
-   }
+    public function update($id,Request $request)
+    {
+        $data=$request->all();
+        $this->taskService->updateTask($id,$request->all());
+        return redirect()->route('tasks.index');
+    }
+    public function export()
+    {
+        return Excel::download(new TasksExport, 'tasks.xlsx');
+    }
 }

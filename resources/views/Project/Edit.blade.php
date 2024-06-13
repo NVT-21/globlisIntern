@@ -18,27 +18,15 @@
                         <form action="{{ route('projects.update',$project->id) }}" method="POST">
                             @csrf
                             @method('PUT')
-                            <div class="form-group">
-                                <label for="code">Code</label>
-                                <input type="text" name="code" id="code" value ='{{$project->code}}'class="form-control" >
-                            </div>
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" name="name" id="name" value='{{$project->name}}' class="form-control" >
-                            </div>
-                            <div class="form-group">
-                                <label for="description">Description</label>
-                                <textarea name="description" id="description" value='{{$project->description}}' class="form-control" ></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="company_id">Company</label>
-                                <select name="company_id" id="company_id" class="form-control">
-                                    <option value="{{$project->company->id}}">{{$project->company->name}}</option>
-                                    @foreach($companies as $company)
-                                        <option value="{{ $company->id }}">{{ $company->name }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
+                            <x-molecules.text-input-field id="code" name="code" label="code" value="{{ $project->code }}" />
+                            <x-molecules.text-input-field id="name" name="name" label=" Name" value="{{ $project->name }}" />
+                            <x-molecules.text-input-field id="description" name="description" label="description" value="{{$project->description }}" />
+                            <x-molecules.select-field id="company_id" name="company_id" label="Company">
+                            <option value="{{ $project->company->id }}">{{ $project->company->name }}</option>
+                            @foreach($companies as $company)
+                                <option value="{{ $company->id }}">{{ $company->name }}</option>
+                            @endforeach
+                           </x-molecules.select-field>
                             <div class="form-group">
                             <label for="people">People in project</label>
                             <td>Name:</td>

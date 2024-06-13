@@ -23,7 +23,7 @@
 
 <body>
     <h1>Task List</h1>
-
+    <a href="{{ route('tasks.export') }}" class="btn btn-success">Export to Excel</a>
     <form action="{{ route('tasks.filter') }}" method="GET" >
        
         <div>

@@ -17,18 +17,13 @@
 <form  action="{{ route('countries.update', $currentCountry->id) }}" method="POST">
     @csrf
     @method("PUT")
-    <div>
-        <label for="code">Code:</label>
-        <input type="text" id="code" name="code" value="{{ $currentCountry->code ?? old('code') }}">
-    </div>
-    <div>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" value="{{ $currentCountry->name ?? old('name') }}">
-    </div>
-    <div>
-        <label for="description">Description:</label>
-        <textarea id="description" name="description">{{ $currCountry->description ?? old('description') }}</textarea>
-    </div>
+    <x-molecules.text-input-field id="code" name="code" label="Code" :value="$currentCountry->code ?? old('code')" />
+
+
+    <x-molecules.text-input-field id="name" name="name" label="Name" :value="$currentCountry->name ?? old('name')" />
+    <x-molecules.textarea-field id="description" name="description" label="Description" :value=" $currentCountry->description "/>
+           
+       
     <button type="submit">edit</button>
 </form>
 @endsection
