@@ -1,3 +1,5 @@
+@extends('layouts.app')
+@section('content')
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -71,3 +73,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+@endsection

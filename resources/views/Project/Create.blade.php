@@ -1,4 +1,6 @@
-<!-- resources/views/projects/create.blade.php -->
+@extends('layouts.app')
+
+@section('content')
 
 <!DOCTYPE html>
 <html lang="en">
@@ -55,4 +57,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="{{ asset('js/project.js') }}"></script>
 </html>
+@endsection
 

@@ -4,7 +4,7 @@
 @section('content')
     <div class="container">
         <h1>People List</h1>
-        <a href="{{ route('people.create') }}" class="btn btn-primary">People Company</a>
+        <a href="{{ route('people.create') }}" class="btn btn-primary">Create People</a>
 
         <!-- Add table to display list of people -->
         <table class="table">

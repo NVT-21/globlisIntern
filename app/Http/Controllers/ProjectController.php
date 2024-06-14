@@ -16,7 +16,7 @@ class ProjectController extends Controller
         $this->companyService = $companyService;
     }
     public function index(){
-        $projects = $this->projectService->getAll(1);
+        $projects = $this->projectService->getAll(2);
         return View('Project.Index',compact('projects'));
     }
    
@@ -46,5 +46,9 @@ class ProjectController extends Controller
     }
     public function getPeople($idProject){
         return $this->projectService->getPeople($idProject);
+    }
+    public function destroy($idProject){
+        $this->projectService->delete($idProject);
+        return redirect()->route('projects.index');
     }
 }

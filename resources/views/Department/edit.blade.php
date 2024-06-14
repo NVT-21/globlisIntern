@@ -1,3 +1,7 @@
+@extends('layouts.app')
+
+
+@section('content')
 <div class="container">
     
                 <div class="card-header">Edit Department</div>
@@ -16,3 +20,4 @@
                     </form>
         
 </div>
+@endsection

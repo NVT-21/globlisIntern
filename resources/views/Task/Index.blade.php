@@ -1,5 +1,8 @@
-<!-- resources/views/tasks/index.blade.php -->
 
+@extends('layouts.app')
+
+
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -99,6 +102,7 @@
                     <td>{{ $task->description }}</td>
                     <td>{{ $statusNames[$task->status] ?? 'UnKnown' }}</td>
                     <td>
+                    <a href="{{ route('tasks.edit', $task->id) }}" class="btn btn-primary">Edit</a>
                     <form action="{{ route('tasks.destroy', $task->id) }}" method="POST">
                             @csrf
                             @method('DELETE')
@@ -115,3 +119,4 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="{{ asset('js/task.js') }}"></script>
 </html>
+@endsection

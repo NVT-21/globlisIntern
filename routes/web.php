@@ -37,6 +37,7 @@ Route::post('projects', [ProjectController::class, 'store'])->name('projects.sto
 Route::get('projects/{projectId}', [ProjectController::class, 'edit'])->name('projects.edit');
 Route::put('projects/{projectId}', [ProjectController::class, 'update'])->name('projects.update');
 Route::get('projects/{projectId}/getPeople', [ProjectController::class, 'getPeople'])->name('projects.get_people');
+Route::delete('projects/{projectId}' ,[ProjectController::class, 'destroy'])->name('projects.destroy');
 //Task
 Route::get('tasks/filter', [TaskController::class, 'filter'])->name('tasks.filter');
 Route::get('/tasks/export', [TaskController::class, 'export'])->name('tasks.export');

@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +37,14 @@
                 </li>
             @endforeach
         </ul>
+        <a href="{{ route('projects.edit', $project->id) }}" class="btn btn-primary">Edit</a>
+                    <form action="{{ route('projects.destroy', $project->id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger" >Delete</button>
+                     </form>
     @endforeach
     {{ $projects->links() }}
 </body>
 </html>
+@endsection

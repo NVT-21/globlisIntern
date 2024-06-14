@@ -26,12 +26,7 @@
                         <td>{{ $person->phone_number }}</td>
                         <td>{{ $person->address }}</td>
                         <td>
-                            <a href="{{ route('people.edit', $person->id) }}" class="btn btn-primary">Edit</a>
-                            <form action="{{ route('people.destroy', $person->id) }}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this person?')">Delete</button>
-                        </form>
+                           
                         <form action="{{ route('companies.add_people', ['idCompany' => request()->route('idCompany'),'personId' => $person->id]) }}" method="POST">
                             @csrf
                             <button type="submit" class="btn btn-danger" >AddToCompany</button>

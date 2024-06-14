@@ -40,7 +40,7 @@ class BaseRepository {
         $modelInstance->delete();
         return true;
     }
-    public function paginate($perPage = 10)
+    public function paginate($perPage = 30)
     {
         return $this->model::paginate($perPage);
     }
